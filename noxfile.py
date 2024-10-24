@@ -28,5 +28,6 @@ def test(session: nox.Session) -> None:
     """
 
     session.install(".[test]")
+    session.install("pytest")
     session.run("pip", "list")
     session.run("pytest", "tests", env={"PYTHONPATH": "src"})
