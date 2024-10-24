@@ -54,7 +54,7 @@ class LabUnc:
 
     def __mul__(self: Self, other: "LabUnc") -> Self:
         C = self.n * other.n
-        C = C * self.combine(self.s / self.n, other.s / other.n)
+        dC = C * self.combine(self.s / self.n, other.s / other.n)
         return type(self)(C, dC)
 
     def __truediv__(self: Self, other: "LabUnc") -> Self:
