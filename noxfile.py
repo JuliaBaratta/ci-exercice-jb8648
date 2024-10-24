@@ -18,7 +18,6 @@ def serve(session: nox.Session) -> None:
     Serve the built documentation.
     """
     docs(session)  # Build the docs first
-    print("Launching docs at http://localhost:8000/ - use Ctrl-C to quit")
     session.run("python", "-m", "http.server", "8000", "-d", "docs/_build/html")
 
 @nox.session

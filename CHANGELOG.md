@@ -22,3 +22,5 @@ for nox -s docs, I also had to pip install sphinx furo myst_parser.
 Once I added all the necessary files and pushed to github, My code was failing my tests with the error "could not find pytest", I fixed a typo in my project.toml file that allowed the optional dependencies to be correctly installed.  
 
 fixed a typo in .pre-commit-config.yaml where I had an extra space"
+
+manually fixed ruff issues delta C and an unused import TypeVar
