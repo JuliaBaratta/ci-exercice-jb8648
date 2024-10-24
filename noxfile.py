@@ -1,6 +1,7 @@
+from __future__ import annotations
+
 import nox
-import sys  # Add this import
-from pathlib import Path
+
 
 @nox.session
 def docs(session: nox.Session) -> None:
@@ -12,6 +13,7 @@ def docs(session: nox.Session) -> None:
     session.chdir("docs")
     session.run("sphinx-build", "-M", "html", ".", "build")
 
+
 @nox.session
 def serve(session: nox.Session) -> None:
     """
@@ -19,6 +21,7 @@ def serve(session: nox.Session) -> None:
     """
     docs(session)  # Build the docs first
     session.run("python", "-m", "http.server", "8000", "-d", "docs/_build/html")
+
 
 @nox.session
 def test(session: nox.Session) -> None:

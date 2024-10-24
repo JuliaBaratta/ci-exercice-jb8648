@@ -13,13 +13,13 @@
 [tool.hatch.build.targets.wheel]
 packages = ["scr/unc"]
 
-to the .toml file. 
+to the .toml file.
 
 (3) I was using the wrong version of Python in my venv. I was using 3.8.8 and the code only works if I have >3.9. I also had to pip install pytest, unscertainties, and typing_extentions
 
 for nox -s docs, I also had to pip install sphinx furo myst_parser.
 
-Once I added all the necessary files and pushed to github, My code was failing my tests with the error "could not find pytest", I fixed a typo in my project.toml file that allowed the optional dependencies to be correctly installed.  
+Once I added all the necessary files and pushed to github, My code was failing my tests with the error "could not find pytest", I fixed a typo in my project.toml file that allowed the optional dependencies to be correctly installed.
 
 fixed a typo in .pre-commit-config.yaml where I had an extra space"
 
