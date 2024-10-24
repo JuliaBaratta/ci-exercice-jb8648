@@ -4,3 +4,17 @@
 ## Version 0.1: start of assignment
 
 * First code.
+
+# Got an error when I tried to run "nox -s test" for a few reasons.
+
+(1) my project names were inconsistant. I changed them all to "ci-exercice-jb8648".
+
+(2)I needed my package to be able to use the /src/unc "path" instead of just src/ to account for the extra directory. I added this code:
+[tool.hatch.build.targets.wheel]
+packages = ["scr/unc"]
+
+to the .toml file. 
+
+(3) I was using the wrong version of Python in my venv. I was using 3.8.8 and the code only works if I have >3.9. I also had to pip install pytest, unscertainties, and typing_extentions
+
+for nox -s docs, I also had to pip install sphinx furo myst_parser.
